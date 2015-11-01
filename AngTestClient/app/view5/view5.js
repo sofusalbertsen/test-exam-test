@@ -10,14 +10,12 @@ angular.module('myApp.view5', ['ngRoute'])
             }])
 
         .controller('View5Ctrl', function ($scope, UserFactory) {
-            $scope.data = UserFactory.query();
-            this.data =UserFactory.query();
-            console.log(this.data);
-            console.log(UserFactory.query());
+            $scope.data = UserFactory.fetchUsers();
+            console.log(UserFactory);
         })
         .factory('UserFactory', ['$http', function ($http) {       
-         var service={};
-           service.query=function () {
+                           return({fetchUsers: this.fetchUsers});
+                function fetchUsers () {
                         $http.get('api/demoadmin/user')
                                 .success(function (data, status, headers, config) {
 //                                 console.log(data);
@@ -27,7 +25,6 @@ angular.module('myApp.view5', ['ngRoute'])
                                     return data;
                                 });
                     };
-                    return service;
                 
             }]);
 ;

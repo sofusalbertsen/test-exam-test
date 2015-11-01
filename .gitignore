@@ -4,3 +4,4 @@ AngSeedClient/node_modules
 *~
 /AngTestClient/node_modules/
 /AngTestServer/nbproject/private/
+/AngTestServer/build/

@@ -1,8 +1,22 @@
 <h3>List users</h3>
 <div>
-  <p>Data from server (Admins only) <b style="color: darkblue">{{data}}</b></p>
-  <ul>
-      <li ng-repeat="person in data">{{person.userName}}</li>
-  </ul>
+    <p>List of all users and their roles:</p>
+  
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Roles</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="person in data">
+              <td ng-bind="person.userName"></td>
+              <td ng-bind="person.password"></td>
+              <td ng-bind="person.roles"></td>
+          </tr>
+      </tbody>
+  </table>
   <!--<p>Server Time: <b style="color: darkblue">{{data.serverTime}}</b></p>-->
 </div>

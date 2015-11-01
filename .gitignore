@@ -2,3 +2,5 @@ AngSeedServer/build
 AngSeedClient/node_modules
 /AngSeedServer/dist/
 *~
+/AngTestClient/node_modules/
+/AngTestServer/nbproject/private/
